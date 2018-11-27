@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+
+  become: "yes"
+  become_method: sudo
+
+  tasks:
+    - name: install
+
+    - name: createbase_db
+    - configure
+    - etna_presential
