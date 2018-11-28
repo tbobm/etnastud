@@ -24,3 +24,14 @@ class Student(models.Model):
 class Promotion(models.Model):
     promo_id = models.IntegerField()
     name = models.CharField(max_length=50)
+
+
+class Project(models.Model):
+    project_id = models.IntegerField()
+    name = models.CharField(max_length=256)
+    promotion = models.OneToOneField(
+        Promotion,
+        on_delete=models.CASCADE,
+        blank=True,
+    )
+
