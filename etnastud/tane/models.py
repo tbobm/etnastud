@@ -25,6 +25,9 @@ class Promotion(models.Model):
     promo_id = models.IntegerField()
     name = models.CharField(max_length=50)
 
+    def __str__(self):
+        return '{} - {}'.format(self.name, self.promo_id)
+
 
 class Project(models.Model):
     project_id = models.IntegerField()
