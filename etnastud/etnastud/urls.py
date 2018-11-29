@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from tane import urls
+
+
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('jet.dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+    path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += urls.urlpatterns
