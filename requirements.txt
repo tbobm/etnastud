@@ -1,6 +1,6 @@
 Django<3
 django-jet==1.0.8
 feedparser==5.2.1
-djangorestframework==3.9.0
+djangorestframework==3.9.1
 Markdown==3.0.1
 django-filter==2.0.0
